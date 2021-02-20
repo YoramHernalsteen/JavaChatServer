@@ -6,9 +6,10 @@ import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RestController;
 
-@CrossOrigin(origins = "*")
-@Controller
+@CrossOrigin("https://yoramhernalsteen.github.io")
+@RestController
 public class WebSocketController {
 
     @MessageMapping("/user-all")
