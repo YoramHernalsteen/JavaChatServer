@@ -14,4 +14,18 @@ public class JavaChatApplication {
         SpringApplication.run(JavaChatApplication.class, args);
     }
 
+    @Bean
+    public WebMvcConfigurer corsConfigurer() {
+        return new WebMvcConfigurer() {
+            @Override
+            public void addCorsMappings(CorsRegistry registry) {
+                registry
+                        .addMapping("/**")
+                        .allowCredentials(true)
+                        .allowedOrigins("https://yoramhernalsteen.github.io")
+                        .allowedMethods("*");
+            }
+        };
+    }
+
 }
