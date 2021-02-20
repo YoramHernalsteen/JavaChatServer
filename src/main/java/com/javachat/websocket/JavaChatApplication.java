@@ -20,7 +20,7 @@ public class JavaChatApplication {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**").allowedOrigins("yoramhernalsteen.github.io/JavaChatClient").allowedHeaders("*");
+                registry.addMapping("/**").allowedOrigins("https://yoramhernalsteen.github.io/").allowedHeaders("*");
             }
         };
     }
