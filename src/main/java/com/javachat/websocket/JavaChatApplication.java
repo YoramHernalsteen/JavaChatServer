@@ -22,7 +22,7 @@ public class JavaChatApplication {
                 registry
                         .addMapping("/**")
                         .allowCredentials(true)
-                        .allowedOrigins("https://yoramhernalsteen.github.io")
+                        .allowedOrigins("https://yoramhernalsteen.github.io", "http://localhost:3000")
                         .allowedMethods("*");
             }
         };
