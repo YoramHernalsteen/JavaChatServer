@@ -10,12 +10,12 @@ import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerCo
 @Configuration
 @EnableWebSocketMessageBroker
 public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
-    @Value("${urlClient}")
-    String urlClient;
+    @Value("${URL_CLIENT}")
+    private static String urlClient;
     @Override
     public void registerStompEndpoints(StompEndpointRegistry stompEndpointRegistry) {
         stompEndpointRegistry.addEndpoint("/websocket-chat")
-                .setAllowedOrigins("https://yoramhernalsteen.github.io/")
+                .setAllowedOrigins(urlClient)
                 .withSockJS();
     }
     @Override

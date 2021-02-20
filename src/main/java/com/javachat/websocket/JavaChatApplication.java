@@ -9,8 +9,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @SpringBootApplication
 public class JavaChatApplication {
-    @Value("${urlClient}")
-    String urlClient;
 
     public static void main(String[] args) {
         SpringApplication.run(JavaChatApplication.class, args);
